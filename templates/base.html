@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+ <link rel="shortcut icon" href="/images/building.png" type="image/png">
+
+<title>BaitHouse</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+
+    <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><b><a bolt="" style="font-size:35px;" href="{% url 'home' %}">BaitHouse</a></h1></b>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a style="font-size: 16px;" href="index.html">Home</a></li>
+          <li><a style="font-size: 16px;" class="drop" href="#">Недвижимость</a>
+            <ul>
+              <li><a href="{% url 'gallery' %}">Квартиры</a></li>
+              <li><a href="{% url 'full' %}">Частные дома</a></li>
+              <li><a href="{% url 'basic-grid' %}">что то</a></li>
+            </ul>
+          </li>
+          <li><a style="font-size: 16px;" class="drop" href="{% url 'create-house' %}">Create</a>
+          </li>
+          <li><a style="font-size: 16px;" href="{% url 'basic-grid' %}">О нас</a></li>
+          <ul>
+          </ul>
+          <li><a href="#"></a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+
+  {% if searched %}
+        <h1>you searched For {{ searched }}</h1>
+  <br/>
+  {% for venue in venues %}
+  <a href="{% url 'gallery' %}">{{ venue }} </a><br/>
+  {% endfor %}
+  {% else %}
+  <h1>Hey! u forgot to search for a Venue...</h1>
+  {% endif %}
+
+</center>
+
+
+
+
+

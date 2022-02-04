@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <title>BaitHouse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="top">
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- Top Background Image Wrapper -->
+  <div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+    <!-- ################################################################################################ -->
+    <div class="wrapper row0">
+      <div id="topbar" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div class="fl_left">
+          <ul class="nospace">
+
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+          </ul>
+        </div>
+        <div class="fl_right">
+          <ul class="nospace">
+            <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+            <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+          </ul>
+        </div>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div id="logo" class="fl_left">
+        <h1><b><a bolt="" style="font-size:35px;" href="{% url 'home' %}">BaitHouse</a></b></h1>
+
+           <form class="d-flex" method="get"  action="{% url 'gallery' %}">
+               <input class="form-control me-2" name="q"  type="search" placeholder="Search Venues"  aria-label="Search">
+              <button class="btn btn-outline-secondary" type="submit">Search</button>
+           </form>
+
+        </div>
+        <nav id="mainav" class="fl_right">
+          <ul class="clear">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li class="active"><a class="drop" href="{% url 'gallery' %}">Недвижимость</a>
+
+            </li>
+            <li><a class="drop" href="{% url 'create-house' %}">Create</a></li>
+
+      </header>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row2">
+      <div id="breadcrumb" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Ipsum</a></li>
+          <li><a href="#">Dolor</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- End Top Background Image Wrapper -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row3">
+    <main class="hoc container clear">
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+
+      <div class="content">
+        <!-- ################################################################################################ -->
+        {% for item in builds %}
+        <div id="gallery">
+          <figure>
+            <header class="heading">{{ item.title }}</header>
+            <div>
+              <img src="{{ item.images.all.first.image.url }}" class="img-thumbnail" alt="...">
+              <a href="{% url 'update-house' item.id %}"><input class="btn btn-primary" type="reset" value="Update"></a>
+              <a href="{% url 'delete-house' item.id %}"><input class="btn btn-primary" type="reset" value="Delete"></a>
+            </div>
+
+            <p>Description: {{ item.description}}</p>
+            <h3>Price: {{ item.price }} $</h3>
+            <h3>Category: {{ item.category }}</h3>
+            <h3>Customer: {{ item.user }}</h3>
+
+            <figcaption>Квартиры</figcaption>
+            <div id="mc-container"></div>
+            <script type="text/javascript">
+              cackle_widget = window.cackle_widget || [];
+              cackle_widget.push({
+                widget: 'Comment',
+                id: 78705
+              });
+              (function () {
+                var mc = document.createElement('script');
+                mc.type = 'text/javascript';
+                mc.async = true;
+                mc.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cackle.me/widget.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(mc, s.nextSibling);
+              })();
+            </script>
+            <a id="mc-link" href="http://cackle.me">Comments system <b style="color:#4FA3DA">Cackl</b><b style="color:#F65077">e</b></a>
+          </figure>
+        </div>
+        {% endfor %}
+
+
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        {% for contact in page_obj %}
+    {# Each "contact" is a Contact model object. #}
+    {{ contact.full_name|upper }}<br>
+    ...
+{% endfor %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+        <!-- ################################################################################################ -->
+      </div>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div class="one_quarter first">
+        <h6 class="title">Tortor vestibulum</h6>
+        <p>Nulla nec metus sed arcu suscipit dignissimmaecenas lobortis quam vel leo placerat lacinia quisque ac dolor
+          fermentum ultrices.</p>
+        <p>Lacus donec aliquam sodales orci eget convallis mauris tempor id leo massa euismod id nisl eu molestie erat.
+        </p>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Tellus ut feugiat</h6>
+        <ul class="nospace linklist contact">
+          <li><i class="fa fa-map-marker"></i>
+            <address>
+              Street Name &amp; Number, Town, Postcode/Zip
+            </address>
+          </li>
+          <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
+            +00 (123) 456 7890</li>
+          <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+          <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Pulvinar et fusce</h6>
+        <ul class="nospace linklist">
+          <li><a href="#">Felis elit ut mollis urna</a></li>
+          <li><a href="#">Ipsum mauris tincidunt at</a></li>
+          <li><a href="#">Nibh ut dignissim elementum</a></li>
+          <li><a href="#">Leo integer suscipit sagittis</a></li>
+          <li><a href="#">Blandit in hac habitasse</a></li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Dictumst integer</h6>
+        <ul class="nospace linklist">
+          <li>
+            <article>
+              <h6 class="nospace font-x1"><a href="#">Vel metus pharetra</a></h6>
+              <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+              <p class="nospace">Maximus ipsum vestibulum diam tortor suscipit vitae&hellip;</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h6 class="nospace font-x1"><a href="#">Fermentum tellus</a></h6>
+              <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+              <p class="nospace">Posuere cursus magnaproin id neque nunc non bibendum&hellip;</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates">OS Templates</a></p>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="../layout/scripts/jquery.min.js"></script>
+  <script src="../layout/scripts/jquery.backtotop.js"></script>
+  <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+
+</html>

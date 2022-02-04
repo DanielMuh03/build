@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>BaitHouse</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+
+</style>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+  <!-- ################################################################################################ -->
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left" style="display:flex; justify-content:space-between;"  >
+        <div style="margin:0 20px;">
+        <h1><b><a bolt="" style="font-size:35px;" href="{% url 'home' %}">BaitHouse</a></b></h1>
+</div>
+
+
+         </div>
+
+
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="active"><a class="drop" href="{% url 'gallery' %}">Недвижимость</a>
+
+          </li>
+
+          </li>
+          <li><a href="#">О нас</a></li>
+
+
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <div id="breadcrumb" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <ul>
+
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="600px" height="100px" viewBox="0 0 600 100">
+<style type="text/css">
+
+<![CDATA[
+
+  text {
+    filter: url(#filter);
+    fill: white;
+      font-family: 'Share Tech Mono', sans-serif;
+      font-size: 100px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+        }
+]]>
+</style>
+  <defs>
+
+    <filter id="filter">
+        <feFlood flood-color="black" result="black" />
+        <feFlood flood-color="red" result="flood1" />
+        <feFlood flood-color="limegreen" result="flood2" />
+      <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+      <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+      <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+      <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+        <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+        <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+
+        <feMerge x="0" width="100%" result="merge1">
+        <feMergeNode in = "black" />
+        <feMergeNode in = "comp1" />
+        <feMergeNode in = "off1b" />
+
+        <animate
+          attributeName="y"
+            id = "y"
+            dur ="4s"
+
+            values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
+
+            keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+
+            repeatCount = "indefinite" />
+
+        <animate attributeName="height"
+            id = "h"
+            dur ="4s"
+
+            values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+
+            keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+
+            repeatCount = "indefinite" />
+        </feMerge>
+
+
+      <feMerge x="0" width="100%" y="60px" height="65px" result="merge2">
+        <feMergeNode in = "black" />
+        <feMergeNode in = "comp2" />
+        <feMergeNode in = "off2b" />
+
+        <animate attributeName="y"
+            id = "y"
+            dur ="4s"
+            values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;'
+
+            keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+
+            repeatCount = "indefinite" />
+
+        <animate attributeName="height"
+            id = "h"
+            dur = "4s"
+
+          values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+
+            keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+
+            repeatCount = "indefinite" />
+        </feMerge>
+
+      <feMerge>
+        <feMergeNode in="SourceGraphic" />
+
+        <feMergeNode in="merge1" />
+      <feMergeNode in="merge2" />
+
+        </feMerge>
+      </filter>
+
+  </defs>
+
+<g>
+  <center><text x="0" y="100">BaitHouse</text></center>
+</g>
+</svg>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <p style="font-size: 30px; word-spacing: 11px;line-height: 1.1;"><b>Компания «BaitHouse»</b> – лидер строительного рынка. Мы строим жилые многоэтажные дома, коммерческие объекты, объекты культурного и социального назначения, мосты, дороги, тоннели, делаем реконструкцию зданий и сооружений.</p>
+
+    <img  style="width: 120px; height: auto;" src="{% static 'images/doba.jpg' %}">
+    <h1><p style="font-size: 20px;"><b>Даниель Мухамеджанов</b></h1> <p style="font-size: 20px;"><br style="font-size: 20px;">Основатель и владелец</br> <br>Образование: высшее юридическое (Кыргызский государственный национальный университет). Выпускник Московского финансово-промышленного университета «Синергия» по программе "Executive Master of Business Administration (ЕМВА). Выпускник Школы владельцев бизнеса «Высоцкий консалтинг». <br></p></p>
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@_davletov_dancho_/video/6882224754305109250" data-video-id="6882224754305109250" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@_davletov_dancho_" href="https://www.tiktok.com/@_davletov_dancho_">@_davletov_dancho_</a> <p></p> <a target="_blank" title="♬ Milly Rock - RAKHIM" href="https://www.tiktok.com/music/Milly-Rock-6874943140915103745">♬ Milly Rock - RAKHIM</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+
+    <img  style="width: 120px; height: auto;" src="{% static 'images/has.jpg' %}">
+    <h1><p style="font-size: 20px;"><b>Хасан Баудунов</b></h1> <p style="font-size: 20px;"><br>Основатель и владелец</br> <br><p style="font-size: 20px;">Бизнес-тренер, профессор бизнеса и маркетинга, доктор экономических наук, доктор психологических наук, основатель и президент Международного центра развития человека «САМО», автор серии книг-бестселлеров о самосовершенствовании и достижении финансового благополучия.</br></p></p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/AY3iCCr_p1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content">
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+
+      <!-- ################################################################################################ -->
+
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="title">Tortor vestibulum</h6>
+      <p>Nulla nec metus sed arcu suscipit dignissimmaecenas lobortis quam vel leo placerat lacinia quisque ac dolor fermentum ultrices.</p>
+      <p>Lacus donec aliquam sodales orci eget convallis mauris tempor id leo massa euismod id nisl eu molestie erat.</p>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Tellus ut feugiat</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Street Name &amp; Number, Town, Postcode/Zip
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
+          +00 (123) 456 7890</li>
+        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Pulvinar et fusce</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Felis elit ut mollis urna</a></li>
+        <li><a href="#">Ipsum mauris tincidunt at</a></li>
+        <li><a href="#">Nibh ut dignissim elementum</a></li>
+        <li><a href="#">Leo integer suscipit sagittis</a></li>
+        <li><a href="#">Blandit in hac habitasse</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Dictumst integer</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <h6 class="nospace font-x1"><a href="#">Vel metus pharetra</a></h6>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+            <p class="nospace">Maximus ipsum vestibulum diam tortor suscipit vitae&hellip;</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h6 class="nospace font-x1"><a href="#">Fermentum tellus</a></h6>
+            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+            <p class="nospace">Posuere cursus magnaproin id neque nunc non bibendum&hellip;</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+{% block content %}
+
+<h1><a href="{% url 'home' %}">CreateHouses</a></h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ build_form.as_p }}
+    {% comment %} {{ formset.management_form }} {% endcomment %}
+    {% comment %} {% for form in formset %}
+    {{ form }}
+    {% endfor %} {% endcomment %}
+    {{ image_form.as_p }}
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+{% endblock %}

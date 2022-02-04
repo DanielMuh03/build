@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+ <link rel="shortcut icon" href="/images/building.png" type="image/png">
+
+<title>BaitHouse</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+
+    <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><b><a bolt="" style="font-size:35px;" href="{% url 'home' %}">BaitHouse</a></h1></b>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a style="font-size: 16px;" href="index.html">Home</a></li>
+          <li><a style="font-size: 16px;" class="drop" href="{% url 'gallery' %}">Недвижимость</a>
+          </li>
+          <li><a style="font-size: 16px;" href="{% url 'basic-grid' %}">О нас</a></li>
+          <ul>
+          </ul>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <center>
+<p style="font-size: 35px;" >Испанский Дом </p>
+    </center>
+        <center>
+          <img  style="width: 620px; height: 200;" src="{% static 'images/elitka.jpg' %}">
+  <p style="font-size: 15px;" >«Испанский дом» – уникальный жилой комплекс премиум-класса с небывалым архитектурным решением, непривычным для нашего любимого города. На создание «Испанского дома» нас вдохновила архитектура зданий города Мадрид. Посетив в 2018 году город столицу Испании наше руководство решило украсить город частичкой испанского духа и красотой сооружений этого необычного города. Мы вдохновлялись такими зданиями города Мадрид, как «Edificio Metrópolis», «Four Seasons Hotel Madrid», «Edificio Banesto» где ныне расположен «Испанский кредитный банк». Все эти архитектурные шедевры воплощены в жилом комплексе премиум-класса «Испанский дом»
+
+</p>
+</center>
+
+
+  <div class="wrapper row4">
+  <footer id="footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="title">О нас</h6>
+      <p>Компания «BaitHouse» – лидер строительного рынка. Мы строим жилые многоэтажные дома, коммерческие объекты, объекты культурного и социального назначения, мосты, дороги, тоннели, делаем реконструкцию зданий и сооружений.</p>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">наши контакты</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Улица Табышалиева &amp; 29, Первый этаж
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +996(504)444 444<br>
+          +996(702)000 333</li>
+        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i>baithouse@mail.ru</li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Обьекты</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Французский квартал</a></li>
+        <li><a href="#">Испанский квартал</a></li>
+        <li><a href="{% url 'bait-house-city' %}">BaitHouse City</a></li>
+        <li><a href="#">Александрия</a></li>
+        <li><a href="#">Эль Классик Плюс</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">В процессе строительства </h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <h6 class="nospace font-x1"><a href="#">BaitHouse City</a></h6>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">Пятница, 6<sup>th</sup> Апрель 2045</time>
+            <p class="nospace">BaitHouse CITY – проект c оригинальной и выразительной архитектурой. &hellip;</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h6 class="nospace font-x1"><a href="#">Испанский Дом</a></h6>
+            <time class="font-xs block btmspace-10" datetime="2045-04-05">Вторник, 5<sup>th</sup> Апрель 2045</time>
+            <p class="nospace">«Испанский дом» — великолепный дом премиум класса, созданный по эксклюзивному проекту.&hellip;</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">BaitHouse &copy; 2022 Cтроим Настоящее - <a href="#">Создаем Будущее</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>

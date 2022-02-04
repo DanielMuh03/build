@@ -1,0 +1,11 @@
+{% block content %}
+
+<h1><a href="{% url 'home' %}">Update</a></h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ build_form.as_p }}
+    {{ image_form.as_p }}
+    <input class="btn btn-primary" type="submit" value="Update">
+</form>
+
+{% endblock %}
